@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Lebid - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-flags">
+            <img src="flags/france.png" alt="French" class="flag" data-lang="fr">
+            <img src="flags/germany.png" alt="German" class="flag" data-lang="de">
+            <img src="flags/ukraine.png" alt="Ukrainian" class="flag" data-lang="ua">
+            <img src="flags/united-kingdom.png" alt="English" class="flag" data-lang="en">
+        </div>
+    </header>
+
+    <section id="home">
+        <h1>Elena Lebid</h1><br><br>
+        <div class="services-container">
+            <h2 class="service-line service-line-1">Child's Speech Assisting</h2>
+            <h2 class="service-line service-line-2">Choral Singing</k2>
+            <h2 class="service-line service-line-3">Theatre Performances</h2>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h1>About Elena</h1>
+        <p>Elena is a multilingual professional fluent in Ukrainian, Russian, and French. She is deeply committed to helping the Swiss community and has received numerous positive references from those she has worked with. Originally from Ukraine, Elena has a strong background in both music and education, holding a high musical education and a master’s degree from university.</p>
+        <p>She offers three key services to her clients. First, she provides child's speech assisting, helping children develop clear and confident communication skills. Additionally, Elena leads choral singing classes, guiding group performances and fostering a love for music among her students. Finally, she directs theatre performances, where she encourages creativity and expression through engaging productions. Elena is thankful for the opportunity to contribute and be of service to the people of Switzerland.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Services</h2>
+
+        <div class="row service-card-container">
+            <div class="col-md-4 service-card">
+                <h3>Child's Speech Assisting</h3>
+                <img src="images/speech/first.jpg" class="service-image" data-bs-toggle="modal" data-bs-target="#lightbox-speech-gallery" alt="Child's Speech Assisting workshop image">
+                <p>Helping children with speech development and confidence building.</p>
+                <div class="steps">
+                    <p><strong>Step 1:</strong> Schedule a speech evaluation to identify your child's needs.</p>
+                    <p><strong>Step 2:</strong> Receive a tailored speech development program.</p>
+                    <p><strong>Step 3:</strong> Attend regular sessions to improve speech skills.</p>
+                </div>
+                <button class="consultation-button" onclick="window.location.href='#contact'">Request a Consultation</button>
+
+                <!-- Modal for Speech Gallery -->
+                <div class="modal fade" id="lightbox-speech-gallery" tabindex="-1" aria-labelledby="lightbox-speech-gallery-label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="lightbox-speech-gallery-label">Speech Assisting Gallery</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="carousel-speech-gallery" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carousel-speech-gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carousel-speech-gallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carousel-speech-gallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/speech/first.jpg" class="d-block w-100" alt="Speech Assisting 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/speech/second.jpg" class="d-block w-100" alt="Speech Assisting 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/speech/third.jpg" class="d-block w-100" alt="Speech Assisting 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-speech-gallery" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-speech-gallery" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Closing service card div -->
+
+            <div class="col-md-4 service-card">
+                <h3>Theatre Performances</h3>
+                <img src="images/theatre/first.jpg" class="service-image" data-bs-toggle="modal" data-bs-target="#lightbox-theatre-gallery" alt="Theatre Performances directing image">
+                <p>Directing theatre productions with both children and adults.</p>
+                <div class="steps">
+                    <p><strong>Step 1:</strong> Sign up for an upcoming theatre production.</p>
+                    <p><strong>Step 2:</strong> Attend scheduled practice sessions with the cast.</p>
+                    <p><strong>Step 3:</strong> Take the stage for live shows with a full audience.</p>
+                </div>
+                <button class="consultation-button" onclick="window.location.href='#contact'">Request a Consultation</button>
+
+                <!-- Modal for Theatre Gallery -->
+                <div class="modal fade" id="lightbox-theatre-gallery" tabindex="-1" aria-labelledby="lightbox-theatre-gallery-label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="lightbox-theatre-gallery-label">Theatre Performances Gallery</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="carousel-theatre-gallery" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/theatre/first.jpg" class="d-block w-100" alt="Theatre Performances 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/theatre/second.jpg" class="d-block w-100" alt="Theatre Performances 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/theatre/third.jpg" class="d-block w-100" alt="Theatre Performances 3">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/theatre/fourth.jpg" class="d-block w-100" alt="Theatre Performances 4">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/theatre/fifth.jpg" class="d-block w-100" alt="Theatre Performances 5">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-theatre-gallery" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-card">
+                <h3>Choral Singing</h3>
+                <img src="images/choral/first.jpg" class="service-image" data-bs-toggle="modal" data-bs-target="#lightbox-choral-gallery" alt="Choral Singing class">
+                <p>Professional choral singing classes and group performances.</p>
+                <div class="steps">
+                    <p><strong>Step 1:</strong> Register for a suitable choral singing class.</p>
+                    <p><strong>Step 2:</strong> Participate in group rehearsals for skill enhancement.</p>
+                    <p><strong>Step 3:</strong> Showcase your progress in group performances.</p>
+                </div>
+                <button class="consultation-button" onclick="window.location.href='#contact'">Request a Consultation</button>
+
+                <!-- Modal for Choral Gallery -->
+                <div class="modal fade" id="lightbox-choral-gallery" tabindex="-1" aria-labelledby="lightbox-choral-gallery-label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="lightbox-choral-gallery-label">Choral Singing Gallery</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="carousel-choral-gallery" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carousel-choral-gallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carousel-choral-gallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carousel-choral-gallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/choral/first.jpg" class="d-block w-100" alt="Choral Singing 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/choral/second.png" class="d-block w-100" alt="Choral Singing 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/choral/third.jpg" class="d-block w-100" alt="Choral Singing 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-choral-gallery" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-choral-gallery" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Closing service card div -->
+        </div> <!-- Closing service card container row div -->
+    </section>
+
+
+    <section id="reviews">
+        <h2>Elena's Reviews</h2>
+        <video autoplay muted loop id="reviewsVideo" src="video.mp4"></video>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="review-name">Alice Muller</p>
+                <p class="review-text">"Elena's guidance helped my child speak with confidence and clarity. The progress we’ve seen in just a few months has been truly remarkable!"</p>
+                <div class="review-info">
+                    <span>Nyon, Switzerland</span>
+                    <span>04/10/2023</span>
+                    <span>10/10</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-name">Philippe Laurent</p>
+                <p class="review-text">"The theatre classes were an absolute delight. Elena has a unique way of bringing out the best in her students, making each performance memorable."</p>
+                <div class="review-info">
+                    <span>Lausanne, Switzerland</span>
+                    <span>06/20/2023</span>
+                    <span>9.5/10</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-name">Sophie Dupont</p>
+                <p class="review-text">"I am amazed at the progress my daughter made in Elena's choral singing class. Her confidence has soared, and her voice has improved greatly."</p>
+                <div class="review-info">
+                    <span>Vevey, Switzerland</span>
+                    <span>08/05/2023</span>
+                    <span>9.2/10</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-name">Jean-Luc Favre</p>
+                <p class="review-text">"Elena's speech therapy sessions were a game-changer for our family. Our son's communication skills have significantly improved, and we couldn’t be happier."</p>
+                <div class="review-info">
+                    <span>Montreux, Switzerland</span>
+                    <span>09/15/2023</span>
+                    <span>10/10</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 id="contactTitle">Contact Elena</h2>
+        <form id="contactForm">
+            <label for="name" id="nameLabel">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" id="emailLabel">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message" id="messageLabel">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" id="submitButton">Send Message</button>
+        </form>
+
+        <!-- Google Maps Iframe -->
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43950.640162675416!2d6.461824727649701!3d46.48999530368917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3716a68e3d4d%3A0x10ab18ce1d966327!2s1110%20Morges%2C%20Switzerland!5e0!3m2!1sen!2sca!4v1727662445928!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/profile.php?id=100012271268090"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/lebedyl/"><img src="icons/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--<video autoplay muted loop id="servicesVideo" poster="images/services-poster.jpg">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>-->
