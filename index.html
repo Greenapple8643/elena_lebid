@@ -30,8 +30,8 @@
         <h1>Elena Lebid</h1><br><br>
         <div class="services-container">
             <h2 class="service-line service-line-1">Child's Speech Assisting</h2>
-            <h2 class="service-line service-line-2">Choral Singing</k2>
-            <h2 class="service-line service-line-3">Theatre Performances</h2>
+            <h2 class="service-line service-line-2">Theatre Performances</k2>
+            <h2 class="service-line service-line-3">Choral Singing</h2>
         </div>
     </section>
     
@@ -49,7 +49,7 @@
             <div class="col-md-4 service-card">
                 <h3>Child's Speech Assisting</h3>
                 <img src="images/speech/first.jpg" class="service-image" data-bs-toggle="modal" data-bs-target="#lightbox-speech-gallery" alt="Child's Speech Assisting workshop image">
-                <p>Helping children with speech development and confidence building.</p>
+                <p>Assisting with speech development and confidence building.</p>
                 <div class="steps">
                     <p><strong>Step 1:</strong> Schedule a speech evaluation to identify your child's needs.</p>
                     <p><strong>Step 2:</strong> Receive a tailored speech development program.</p>
@@ -169,7 +169,6 @@
                 </div>
                 <button class="consultation-button" onclick="window.location.href='#contact'">Request a Consultation</button>
 
-                <!-- Modal for Choral Gallery -->
                 <div class="modal fade" id="lightbox-choral-gallery" tabindex="-1" aria-labelledby="lightbox-choral-gallery-label" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
@@ -214,7 +213,7 @@
 
 
     <section id="reviews">
-        <h2>Elena's Reviews</h2>
+        <h2>Clients' Reviews</h2>
         <video autoplay muted loop id="reviewsVideo" src="video.mp4"></video>
         <div class="reviews-container">
             <div class="review-card">
@@ -226,6 +225,7 @@
                     <span>10/10</span>
                 </div>
             </div>
+
             <div class="review-card">
                 <p class="review-name">Philippe Laurent</p>
                 <p class="review-text">"The theatre classes were an absolute delight. Elena has a unique way of bringing out the best in her students, making each performance memorable."</p>
@@ -253,33 +253,66 @@
                     <span>10/10</span>
                 </div>
             </div>
-            
+
+            <div class="review-card">
+                <p class="review-name">Maryna Lando</p>
+                <p class="review-text">"Top-notch service! Friendly staff and efficient work. Will return for sure!"</p>
+                <div class="review-info">
+                    <span>Lausanne, Switzerland</span>
+                    <span>08/06/2024</span>
+                    <span>9.8/10</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-name">Tetiana Todorenko</p>
+                <p class="review-text">"Elena's expertise in speech therapy made a remarkable difference in our son's communication skills. Highly recommend Elena's services to any parent looking for real results!"</p>
+                <div class="review-info">
+                    <span>Morges, Switzerland</span>
+                    <span>09/20/2024</span>
+                    <span>10/10</span>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <!-- Left side - Map -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43950.640162675416!2d6.461824727649701!3d46.48999530368917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3716a68e3d4d%3A0x10ab18ce1d966327!2s1110%20Morges%2C%20Switzerland!5e0!3m2!1sen!2sca!4v1727662445928!5m2!1sen!2sca"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="service">Requested Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a Service</option> <!-- Placeholder -->
+                        <option value="speech">Child's Speech Assisting</option>
+                        <option value="choral">Choral Singing</option>
+                        <option value="theatre">Theatre Performances</option>
+                    </select>
+
+                    <div class="submit-btn-container">
+                        <button class="submit-btn" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 id="contactTitle">Contact Elena</h2>
-        <form id="contactForm">
-            <label for="name" id="nameLabel">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email" id="emailLabel">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message" id="messageLabel">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" id="submitButton">Send Message</button>
-        </form>
-
-        <!-- Google Maps Iframe -->
-        <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43950.640162675416!2d6.461824727649701!3d46.48999530368917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3716a68e3d4d%3A0x10ab18ce1d966327!2s1110%20Morges%2C%20Switzerland!5e0!3m2!1sen!2sca!4v1727662445928!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-
     <footer>
         <div class="social-icons">
             <a href="https://www.linkedin.com"><img src="icons/linkedin.png" alt="LinkedIn"></a>
@@ -292,12 +325,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-<!--<video autoplay muted loop id="servicesVideo" poster="images/services-poster.jpg">
-    <source src="video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>-->
