@@ -165,7 +165,7 @@ section {
     display: flex;
     justify-content: space-between; /* Space between the cards */
     align-items: center;
-    padding: 0 15%; /* Ensuring the content takes up from 20% to 80% of the screen width */
+    padding: 0 10%; /* Ensuring the content takes up from 20% to 80% of the screen width */
 }
 
 #services h2 {
@@ -183,7 +183,6 @@ section {
     align-items: center;
     width: 90%;
 }
-
 
 .service-card {
     background-color:#0085b6;
@@ -239,7 +238,6 @@ section {
     cursor: pointer;
 }
 
-
 .steps p {
     color: #f4ebd0;
     font-size: 14px;
@@ -256,6 +254,7 @@ section {
     height: 100%; /* Full screen height */
     object-fit: cover;
     z-index: 1;
+    opacity: 50%;
 }
 
 #reviews {
