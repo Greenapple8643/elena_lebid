@@ -35,7 +35,14 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     window.location.href = `mailto:lebedyl@ukr.net?subject=${subject}&body=${body}`;
 });
 
-// Translation object for all sections in English, French, German, and Ukrainian
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+// Toggle the visibility of the navbar when the hamburger is clicked
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('show');  // Toggles the 'show' class to the navbar
+});
+
 const translations = {
     en: {
         navbar: ['Home', 'About', 'Services', 'Reviews', 'Contact'],
@@ -53,17 +60,20 @@ const translations = {
             speech: {
                 title: "Child's Speech Assisting",
                 description: "Assisting with speech development and confidence building.",
-                steps: ['Step 1: Schedule a speech evaluation.', 'Step 2: Receive a tailored speech development program.', 'Step 3: Attend regular sessions.']
+                steps: ['Step 1: Schedule a speech evaluation.', 'Step 2: Receive a tailored speech development program.', 'Step 3: Attend regular sessions.'],
+                button: "Request a Consultation"
             },
             theatre: {
                 title: "Theatre Performances",
                 description: "Directing theatre productions for children and adults.",
-                steps: ['Step 1: Sign up for an upcoming production.', 'Step 2: Attend practice sessions.', 'Step 3: Perform in front of a live audience.']
+                steps: ['Step 1: Sign up for an upcoming production.', 'Step 2: Attend practice sessions.', 'Step 3: Perform in front of a live audience.'],
+                button: "Request a Consultation"
             },
             choral: {
                 title: "Choral Singing",
                 description: "Professional choral singing classes and performances.",
-                steps: ['Step 1: Register for a singing class.', 'Step 2: Participate in group rehearsals.', 'Step 3: Showcase progress in performances.']
+                steps: ['Step 1: Register for a singing class.', 'Step 2: Participate in group rehearsals.', 'Step 3: Showcase progress in performances.'],
+                button: "Request a Consultation"
             }
         },
         reviews: {
@@ -100,17 +110,20 @@ const translations = {
             speech: {
                 title: "Assistance à la parole des enfants",
                 description: "Aider au développement de la parole et à la confiance.",
-                steps: ['Étape 1: Planifiez une évaluation.', 'Étape 2: Recevez un programme adapté.', 'Étape 3: Participez à des séances régulières.']
+                steps: ['Étape 1: Planifiez une évaluation.', 'Étape 2: Recevez un programme adapté.', 'Étape 3: Participez à des séances régulières.'],
+                button: "Demander une consultation"
             },
             theatre: {
                 title: "Performances théâtrales",
                 description: "Direction de productions théâtrales pour enfants et adultes.",
-                steps: ['Étape 1: Inscrivez-vous à une production.', 'Étape 2: Assistez aux répétitions.', 'Étape 3: Montez sur scène devant un public.']
+                steps: ['Étape 1: Inscrivez-vous à une production.', 'Étape 2: Assistez aux répétitions.', 'Étape 3: Montez sur scène devant un public.'],
+                button: "Demander une consultation"
             },
             choral: {
                 title: "Chant choral",
                 description: "Cours de chant choral et performances.",
-                steps: ['Étape 1: Inscrivez-vous à un cours de chant.', 'Étape 2: Participez aux répétitions.', 'Étape 3: Présentez vos progrès en performance.']
+                steps: ['Étape 1: Inscrivez-vous à un cours de chant.', 'Étape 2: Participez aux répétitions.', 'Étape 3: Présentez vos progrès en performance.'],
+                button: "Demander une consultation"
             }
         },
         reviews: {
@@ -147,17 +160,20 @@ const translations = {
             speech: {
                 title: "Kinder Sprachassistenz",
                 description: "Unterstützung bei der Sprachentwicklung und dem Selbstbewusstsein.",
-                steps: ['Schritt 1: Planen Sie eine Bewertung.', 'Schritt 2: Erhalten Sie ein maßgeschneidertes Programm.', 'Schritt 3: Nehmen Sie an regelmäßigen Sitzungen teil.']
+                steps: ['Schritt 1: Planen Sie eine Bewertung.', 'Schritt 2: Erhalten Sie ein maßgeschneidertes Programm.', 'Schritt 3: Nehmen Sie an regelmäßigen Sitzungen teil.'],
+                button: "Beratung anfordern"
             },
             theatre: {
                 title: "Theateraufführungen",
                 description: "Leitung von Theaterproduktionen für Kinder und Erwachsene.",
-                steps: ['Schritt 1: Melden Sie sich für eine Produktion an.', 'Schritt 2: Besuchen Sie Proben.', 'Schritt 3: Treten Sie vor einem Publikum auf.']
+                steps: ['Schritt 1: Melden Sie sich für eine Produktion an.', 'Schritt 2: Besuchen Sie Proben.', 'Schritt 3: Treten Sie vor einem Publikum auf.'],
+                button: "Beratung anfordern"
             },
             choral: {
                 title: "Chorgesang",
                 description: "Professionelle Chorgesang-Kurse und Aufführungen.",
-                steps: ['Schritt 1: Melden Sie sich für einen Gesangskurs an.', 'Schritt 2: Nehmen Sie an Gruppenproben teil.', 'Schritt 3: Präsentieren Sie Ihre Fortschritte.']
+                steps: ['Schritt 1: Melden Sie sich für einen Gesangskurs an.', 'Schritt 2: Nehmen Sie an Gruppenproben teil.', 'Schritt 3: Präsentieren Sie Ihre Fortschritte.'],
+                button: "Beratung anfordern"
             }
         },
         reviews: {
@@ -194,17 +210,20 @@ const translations = {
             speech: {
                 title: "Допомога дітям з мовленням",
                 description: "Допомога у розвитку мовлення та впевненості.",
-                steps: ['Крок 1: Запишіться на оцінку.', 'Крок 2: Отримайте індивідуальну програму.', 'Крок 3: Відвідуйте регулярні заняття.']
+                steps: ['Крок 1: Запишіться на оцінку.', 'Крок 2: Отримайте індивідуальну програму.', 'Крок 3: Відвідуйте регулярні заняття.'],
+                button: "Замовити консультацію"
             },
             theatre: {
                 title: "Театральні вистави",
                 description: "Режисура театральних постановок для дітей і дорослих.",
-                steps: ['Крок 1: Запишіться на виставу.', 'Крок 2: Відвідуйте репетиції.', 'Крок 3: Виступайте перед аудиторією.']
+                steps: ['Крок 1: Запишіться на виставу.', 'Крок 2: Відвідуйте репетиції.', 'Крок 3: Виступайте перед аудиторією.'],
+                button: "Замовити консультацію"
             },
             choral: {
                 title: "Хоровий спів",
                 description: "Професійні заняття хоровим співом та виступи.",
-                steps: ['Крок 1: Зареєструйтесь на заняття.', 'Крок 2: Відвідуйте репетиції.', 'Крок 3: Покажіть свої досягнення.']
+                steps: ['Крок 1: Зареєструйтесь на заняття.', 'Крок 2: Відвідуйте репетиції.', 'Крок 3: Покажіть свої досягнення.'],
+                button: "Замовити консультацію"
             }
         },
         reviews: {
@@ -266,33 +285,35 @@ function updateText(language) {
     // Update services section
     document.querySelector('#services h2').textContent = selectedLang.services.title;
     
-    // Update each service card
-    document.querySelectorAll('.service-card').forEach((card, index) => {
-        if (index === 0) {
-            card.querySelector('h3').textContent = selectedLang.services.speech.title;
-            card.querySelector('p').textContent = selectedLang.services.speech.description;
-            const steps = card.querySelectorAll('.steps p');
-            steps.forEach((step, stepIndex) => {
-                step.textContent = selectedLang.services.speech.steps[stepIndex];
-            });
-        } else if (index === 1) {
-            card.querySelector('h3').textContent = selectedLang.services.theatre.title;
-            card.querySelector('p').textContent = selectedLang.services.theatre.description;
-            const steps = card.querySelectorAll('.steps p');
-            steps.forEach((step, stepIndex) => {
-                step.textContent = selectedLang.services.theatre.steps[stepIndex];
-            });
-        } else if (index === 2) {
-            card.querySelector('h3').textContent = selectedLang.services.choral.title;
-            card.querySelector('p').textContent = selectedLang.services.choral.description;
-            const steps = card.querySelectorAll('.steps p');
-            steps.forEach((step, stepIndex) => {
-                step.textContent = selectedLang.services.choral.steps[stepIndex];
-            });
-        }
-    });
+document.querySelectorAll('.service-card').forEach((card, index) => {
+    if (index === 0) {
+        card.querySelector('h3').textContent = selectedLang.services.speech.title;
+        card.querySelector('p').textContent = selectedLang.services.speech.description;
+        const steps = card.querySelectorAll('.steps p');
+        steps.forEach((step, stepIndex) => {
+            step.textContent = selectedLang.services.speech.steps[stepIndex];
+        });
+        card.querySelector('.consultation-button').textContent = selectedLang.services.speech.button; // Add this line
+    } else if (index === 1) {
+        card.querySelector('h3').textContent = selectedLang.services.theatre.title;
+        card.querySelector('p').textContent = selectedLang.services.theatre.description;
+        const steps = card.querySelectorAll('.steps p');
+        steps.forEach((step, stepIndex) => {
+            step.textContent = selectedLang.services.theatre.steps[stepIndex];
+        });
+        card.querySelector('.consultation-button').textContent = selectedLang.services.theatre.button; // Add this line
+    } else if (index === 2) {
+        card.querySelector('h3').textContent = selectedLang.services.choral.title;
+        card.querySelector('p').textContent = selectedLang.services.choral.description;
+        const steps = card.querySelectorAll('.steps p');
+        steps.forEach((step, stepIndex) => {
+            step.textContent = selectedLang.services.choral.steps[stepIndex];
+        });
+        card.querySelector('.consultation-button').textContent = selectedLang.services.choral.button; // Add this line
+    }
+});
 
-    // Update reviews section
+
     document.querySelector('#reviews h2').textContent = selectedLang.reviews.title;
     const reviewCards = document.querySelectorAll('.review-card');
     reviewCards.forEach((card, index) => {
