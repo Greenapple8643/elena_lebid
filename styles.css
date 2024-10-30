@@ -2,7 +2,6 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #f4ebd0; /* Keeping light beige as the neutral background */
     color: #0085b6; /* Primary text color set to blue */
     display: flex;
     flex-direction: column;
@@ -22,12 +21,12 @@ header, footer {
 
 header {
     top: 0;
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.0); /* Make the header background transparent */
+    background-color: rgba(0, 0, 0, 0.1); /* Make the header background transparent */
 }
 
 .hamburger {
@@ -49,6 +48,7 @@ header {
 .navbar li a {
     padding: 10px 20px;
     color: #ff005d;
+    font-weight: bold;
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
@@ -64,6 +64,7 @@ header {
     left: 0;
     bottom: 0;
     transition: width 0.4s ease-out; /* Transition for the underscore */
+    background-color: white;
 }
 
 .navbar li a:hover::after {
@@ -72,13 +73,13 @@ header {
 
 .navbar li a:hover {
     transform: translateY(-5px); /* Moves the navbar item slightly up on hover */
-    color: #0085b6; /* Changes text color on hover (optional) */
+    color: white; /* Changes text color on hover (optional) */
 }
 
 .language-flags {
     position: absolute; /* Absolute positioning to move the flags independently */
     right: 80px; /* Align the flags to the right */
-    top: 25px; /* Adjust the vertical position */
+    top: 17px; /* Adjust the vertical position */
     display: flex;
     gap: 10px; /* Add spacing between flags */
 }
@@ -125,9 +126,9 @@ section {
     position: relative;
     right: -100%; /* Start offscreen to the right */
     transition: all 0.5s ease-out;
-    color: #ff005d;
+    color:#f4ebd0;
     border-radius: 10px;
-    background-color: rgba(244, 235, 208, 0.5);
+    background-color: rgba(255, 0, 93, 1);
 }
 
 .service-line-1 {
@@ -136,13 +137,13 @@ section {
 }
 
 .service-line-2 {
-    transition-delay: 0.5s; /* Delay for the second line */
-    transform: translateX(75px); /* Shift by 75px */
+    transition-delay: 0.3s; /* Delay for the second line */
+    transform: translateX(50px); /* Shift by 75px */
 }
 
 .service-line-3 {
-    transition-delay: 1s; /* Delay for the third line */
-    transform: translateX(150px); /* Shift by 150px */
+    transition-delay: 0.6s; /* Delay for the third line */
+    transform: translateX(100px); /* Shift by 150px */
 }
 
 /* When the element becomes visible */
@@ -160,7 +161,7 @@ section {
 
 #about h1 {
     color: #ff005d;
-    font-size: 70px;
+    font-size: 50px;
     font-family: Edwardian Script ITC;
 }
 
@@ -186,9 +187,8 @@ section {
 
 #services h2 {
     display: inline-block; /* Ensures the background covers only the text */
-    padding: 5px 10px; /* Adds padding around the text */
     color: #ff005d;
-    margin-top: 3rem;
+    margin: 3rem;
     font-family: Edwardian Script ITC;
     font-size: 50px;
 }
@@ -287,8 +287,9 @@ section {
     position: relative;
     color: #ff005d;
     font-family: Edwardian Script ITC;
+    margin: 3rem;
     font-size: 50px;
-    z-index: 1; /* Ensures the text stays on top of the video */
+    z-index: 0; /* Ensures the text stays on top of the video */
 }
 
 .reviews-container {
@@ -336,7 +337,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0); /* Keep it transparent */
+    background-color: rgba(0, 0, 0, 0.15); /* Keep it transparent */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,8 +403,9 @@ footer {
 .contact-form h2 {
     text-align: center;
     color: #f4ebd0;
-    font-size: 60px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: Edwardian Script ITC;
 }
 
@@ -490,27 +492,45 @@ footer {
     cursor: pointer;
 }
 
+@media (max-width: 1370px) {
+    .contact-form h2 {
+        margin: 50px !important;
+    }
+
+    .service-card {
+        margin: 20px;
+    }
+}
+
 @media (max-width: 768px) {
 
-    #home {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; /* Aligns text at the top vertically */
-        align-items: center 20px; /* Centers the text horizontally */
-        padding-top: 140px; /* Adjust this value to control the space from the top */
-        padding-left: 0; /* Remove left padding for mobile */
-        text-align: center; /* Ensures text is centered */
-        min-height: 100vh; /* Ensures the section takes full screen height */
-    }
 
     #home h1 {
         font-size: 50px; /* Adjust font size for mobile */
         margin: 0; /* Ensure no extra margin */
+        margin-top: -21rem;
+    }
+
+    #home {
+        background: url('images/main.jpg') no-repeat center center/cover;
+        background-size: cover;
+        text-align: center;
+        padding: 0;
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    #home img {
+        max-width: 100%;  /* Ensures the image doesn't exceed the width of the container */
+        height: auto;
     }
 
     .service-line {
         font-size: 20px; /* Adjust font size of service lines for mobile */
-        background-color: rgba(244, 235, 208, 0.5);
+        background-color:#ff005d;
+        color:#f4ebd0;
     }
 
     .service-line-1 {
@@ -520,20 +540,25 @@ footer {
     
     .service-line-2 {
         transition-delay: 0.5s; /* Delay for the second line */
-        transform: translateX(35px); 
+        transform: translateX(25px); 
     }
     
     .service-line-3 {
         transition-delay: 1s; /* Delay for the third line */
-        transform: translateX(70px);
+        transform: translateX(50px);
     }
 
     .language-flags {
-        position: absolute; /* Absolute positioning to move the flags independently */
-        right: 20px; /* Align the flags to the right */
-        top: 20px; /* Adjust the vertical position */
+        position: absolute;
+        right: 45px; /* Ensures the flags are aligned to the right edge */
+        top: 25px; /* Adjusted to fit better */
         display: flex;
-        gap: 10px; /* Add spacing between flags */
+        gap: 10px; /* Reduced gap between flags */
+    }
+
+    .language-flags img {
+        width: 35px; /* Smaller flag size for mobile */
+        height: 35px;
     }
 
     .navbar.show {
@@ -587,10 +612,10 @@ footer {
 
     .hamburger {
         display: block;
-        font-size: 2rem;
+        font-size: 3rem;
         position: absolute;
-        left: 2.5rem;
-        top: 1rem;
+        left: 2rem;
+        top: 0.65rem;
         color: #ff005d;
         cursor: pointer; /* Show it's clickable */
     }
@@ -602,7 +627,7 @@ footer {
     }
 
     #about h1 {
-        font-size: 40px; /* Match the font size of 'Elena Lebid' heading */
+        font-size: 50px; /* Match the font size of 'Elena Lebid' heading */
         color: #ff005d; /* Same color as 'Elena Lebid' */
         white-space: nowrap; /* Ensure it stays in one line */
         text-align: center; /* Center align the heading */
@@ -620,13 +645,25 @@ footer {
     }
 
     .service-card-container {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center; /* Center the card horizontally */
+        margin: 0 !important; /* Remove any outer margin */
+        padding: 0 !important;
+        border-radius: 0px !important;
+        width: 100vw !important;
     }
 
     .service-card {
-        width: 90%;
-        margin: 20px 0;
+        width: 100vw !important; /* 100% of the viewport width */
+        margin: 20px auto; /* No margin around the card */
+        padding: 10px; /* Adjust padding if needed to fit your content */
+        box-sizing: border-box; /* Include padding and border in the card's width */
+        height: auto; /* Let the height adjust based on the content */
+        border-radius: 0px !important;
+    }
+    
+    #services h2 {
+        font-size: 50px !important;
+        white-space: nowrap;
     }
 
     #reviewsVideo {
@@ -636,32 +673,88 @@ footer {
 
     .reviews-container {
         grid-template-columns: 1fr;
-        width: 100%;
+        justify-content: center; /* Center the card horizontally */
+        grid-gap: 0px !important;
+        padding: 0 15px !important;
+        margin: 0 !important; /* Remove any outer margin */
+        width: 100vw;
     }
 
     .review-card {
-        width: 90%;
-        margin: 20px auto;
+        width: 100%;
+        margin: 10px auto;
+        background-color: rgba(244, 235, 208, 0.3);
+    }
+
+    #reviews h2 {
+        font-size: 50px !important;
+        white-space: nowrap;
     }
 
     .contact-container {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* Stack the map and form vertically */
+        align-items: center; /* Center align the items */
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height of the viewport */
+        padding: 0; /* Remove any padding */
+        gap: 10px; /* Remove gap between elements */
     }
 
-    .contact-map, .contact-form {
-        width: 100%;
-        margin-bottom: 20px;
+    .contact-map {
+        width: 100%; /* Full width */
+        height: 40%; /* 30% of the viewport height */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        box-sizing: border-box; /* Include padding in the element’s dimensions */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width */
+        height: 60%; /* 60% of the viewport height */
+        padding: 15px; /* Add padding inside the form */
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        justify-content: space-between; /* Space between form elements */
+        box-sizing: border-box; /* Include padding in the element’s dimensions */
+    }
+
+    .contact-form h2 {
+        font-size: 40px;
+        margin: 5px; /* Set a consistent space between heading and labels */
+        text-align: center;
+
+    }
+
+
+    .submit-btn {
+        padding-top: 5px;
+        background-color: #ff005d; /* Matched to Services button */
+        color: #f4ebd0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    
+    /* Submit button hover effect */
+    .submit-btn:hover {
+        background-color: rgba(255, 0, 93, 0.9);
+        color: rgba(244, 235, 208, 0.9);
+        transform: scale(1.1); /* Slight zoom effect on hover */
+        cursor: pointer;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        margin-top: 0;
+        padding: 10px 0;
     }
 
     .social-icons img {
         width: 40px; /* Smaller icons for mobile */
         height: 40px;
     }
-
-    footer {
-        position: fixed !important;
-        bottom: 0;
-    }
-
 }

@@ -145,7 +145,7 @@ const translations = {
         }
     },
     de: {
-        navbar: ['Startseite', 'Über', 'Dienstleistungen', 'Bewertungen', 'Kontakt'],
+        navbar: ['Startseite', 'Uber', 'Dienstleistungen', 'Bewertungen', 'Kontakt'],
         home: {
             title: "Elena Lebid",
             services: ['Kinder Sprachassistenz', 'Theateraufführungen', 'Chorgesang']
