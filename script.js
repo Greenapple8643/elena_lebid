@@ -47,7 +47,7 @@ const translations = {
     en: {
         navbar: ['Home', 'About', 'Services', 'Reviews', 'Contact'],
         home: {
-            title: "Elena Lebid",
+            title: "Speak with Elena!",
             services: ['Child\'s Speech Assisting', 'Theatre Performances', 'Choral Singing']
         },
         about: {
@@ -97,7 +97,7 @@ const translations = {
     fr: {
         navbar: ['Accueil', 'À propos', 'Services', 'Avis', 'Contact'],
         home: {
-            title: "Elena Lebid",
+            title: "Parlez à Elena !",
             services: ['Assistance à la parole des enfants', 'Performances théâtrales', 'Chant choral']
         },
         about: {
@@ -147,7 +147,7 @@ const translations = {
     de: {
         navbar: ['Startseite', 'Uber', 'Dienstleistungen', 'Bewertungen', 'Kontakt'],
         home: {
-            title: "Elena Lebid",
+            title: "Sprich mit Elena!",
             services: ['Kinder Sprachassistenz', 'Theateraufführungen', 'Chorgesang']
         },
         about: {
@@ -197,7 +197,7 @@ const translations = {
     ua: {
         navbar: ['Головна', 'Про мене', 'Послуги', 'Відгуки', 'Контакти'],
         home: {
-            title: "Олена Лебідь",
+            title: "Поговори з Оленою!",
             services: ['Допомога дітям з мовленням', 'Театральні вистави', 'Хоровий спів']
         },
         about: {
